@@ -2,9 +2,11 @@ using Microsoft.AspNetCore.Mvc;
 using FarmaciaApi.Data;
 using FarmaciaApi.Entities;
 using System.Linq;
+using Microsoft.AspNetCore.Authorization;
 
 [ApiController]
 [Route("Inventario")]
+[Authorize]
 public class InventarioController : ControllerBase
 {
     private readonly AppDbContext _context;

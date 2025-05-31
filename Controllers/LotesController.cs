@@ -1,11 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
 using FarmaciaApi.Data;
 using FarmaciaApi.Entities;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FarmaciaApi.Controllers
 {
     [ApiController]
     [Route("Lotes")]
+    [Authorize]
     public class LotesController : ControllerBase
     {
         private readonly AppDbContext _context;

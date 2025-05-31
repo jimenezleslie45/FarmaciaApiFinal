@@ -3,11 +3,13 @@ using FarmaciaApi.Data;
 using FarmaciaApi.Entities;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FarmaciaApi.Controllers
 {
     [ApiController]
     [Route("ventas")]
+    [Authorize]
     public class VentasController : ControllerBase
     {
         private readonly AppDbContext _context;

@@ -1,11 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
 using FarmaciaApi.Data;
 using FarmaciaApi.Entities;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FarmaciaApi.Controllers
 {
     [ApiController]
     [Route("Entradas")]
+    [Authorize]
     public class EntradasController : ControllerBase
     {
         private readonly AppDbContext _context;

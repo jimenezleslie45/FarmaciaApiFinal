@@ -1,11 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
 using FarmaciaApi.Data;
 using FarmaciaApi.Entities;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FarmaciaApi.Controllers
 {
     [ApiController]
     [Route("Carrito")]
+    [Authorize]
     public class CarritoController : ControllerBase
     {
         private readonly AppDbContext _context;
